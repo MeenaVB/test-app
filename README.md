@@ -116,3 +116,62 @@ node index.js
 ```
 
 `npm install` requires a restored `package.json`; both commands require the missing application files.
+
+## Project Structure
+
+```text
+.
+├── ._.DS_Store
+├── ._data
+├── ._index.js
+├── ._package.json
+├── ._src
+├── data/
+│   └── ._questions.json
+└── src/
+    ├── ._colors.js
+    ├── ._input.js
+    └── ._quiz.js
+```
+
+The `._*` entries are AppleDouble metadata files created by macOS. They are not substitutes for the corresponding application files and should generally be excluded from source control.
+
+## Core Components
+
+No readable implementation is available. Based on the filenames, the intended responsibilities are:
+
+- `index.js`: application entry point
+- `src/quiz.js`: quiz flow and scoring logic
+- `src/input.js`: interactive input collection
+- `src/colors.js`: terminal color or formatting helpers
+- `data/questions.json`: quiz question source
+
+These responsibilities must be confirmed when the missing files are restored.
+
+## Data Sources
+
+The repository contains only `data/._questions.json`, which is metadata. No usable question data is currently available. A restored application is expected to load data from `data/questions.json`.
+
+## Development Notes
+
+- The current checkout contains metadata files only; no application code can be executed.
+- There is no readable `package.json`, so dependencies and npm scripts cannot be confirmed.
+- Remove AppleDouble files before restoring or publishing the application.
+- Add tests and document the supported Node.js version once the implementation is available.
+
+## Error Handling
+
+No error-handling behavior can be documented or tested because the executable source files are missing. A restored implementation should document behavior for invalid answers, missing question data, malformed JSON, and end-of-input conditions.
+
+## Future Improvements
+
+- Restore `index.js`, the `src/` modules, `data/questions.json`, and `package.json`.
+- Add automated tests for question loading, input validation, scoring, and terminal output.
+- Define and document the question-data schema.
+- Add a supported Node.js version and npm scripts.
+- Remove committed AppleDouble metadata files.
+- Add a license and contribution guidelines.
+
+## License
+
+No license file or license declaration is present. The project’s licensing terms are currently unspecified.
