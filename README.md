@@ -66,31 +66,47 @@ Neither command is executable in the current checkout because the referenced fil
 
 ## Usage Examples
 
-The following examples document the intended interface suggested by the repository layout. They are concrete restoration examples, not commands that can run against the current metadata-only checkout.
+The repository does not currently contain an executable quiz, so the examples below are restoration targets rather than commands that can run in the current checkout.
 
-### Start a quiz
+### Start the quiz
+
+After restoring `index.js` and the supporting modules:
 
 ```bash
 node index.js
 ```
 
-A restored application would be expected to read questions from `data/questions.json`, prompt the user through `src/input.js`, and use `src/quiz.js` to manage quiz behavior.
+Expected interaction, if implemented as suggested by the filenames:
 
-### Example question-data format
-
-If the restored implementation expects JSON question data, a minimal data file could look like this:
-
-```json
-[
-  {
-    "question": "Which language runs in Node.js?",
-    "options": ["JavaScript", "CSS", "SQL", "HTML"],
-    "answer": "JavaScript"
-  }
-]
+```text
+$ node index.js
+Question 1: Which language runs in Node.js?
+1) JavaScript
+2) CSS
+3) SQL
+4) HTML
+Your answer: 1
 ```
 
-The exact property names and accepted answer format cannot be confirmed because `data/questions.json` is missing.
+The exact prompt and output format cannot be verified because `src/quiz.js` and `src/input.js` are missing.
+
+### Restore question data
+
+The expected data location is:
+
+```text
+data/questions.json
+```
+
+A possible question record, subject to confirmation from the restored implementation, is:
+
+```json
+{
+  "question": "Which language runs in Node.js?",
+  "options": ["JavaScript", "CSS", "SQL", "HTML"],
+  "answer": "JavaScript"
+}
+```
 
 ### Install and run a restored copy
 
@@ -99,4 +115,4 @@ npm install
 node index.js
 ```
 
-These commands apply only after the missing `package.json`, `index.js`, source modules, and question data have been restored.
+`npm install` requires a restored `package.json`; both commands require the missing application files.
