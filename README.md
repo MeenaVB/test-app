@@ -2,130 +2,149 @@
 
 ## Project Overview
 
-`test-app` appears to be a small Node.js command-line quiz application. The repository currently contains only AppleDouble metadata files (`._*`), while the JavaScript source files, question data, and package manifest referenced by those metadata names are absent. As a result, the application cannot currently be installed or executed from this checkout.
+`test-app` is a repository that appears to have been intended to contain a small Node.js command-line quiz application. This purpose is suggested by the repository documentation, directory names, and filenames, but the application implementation is not currently available in a readable or usable form.
+
+The repository does not currently contain the ordinary source files, package manifest, or question data required to verify or run the application. As a result:
+
+- The intended application behavior cannot be confirmed.
+- Installation and execution instructions cannot be validated.
+- Runtime, dependency, and build requirements are unknown.
+- No public API, command-line interface, functions, classes, or error-handling behavior can be documented as implemented.
+
+This README documents the repository's current state and the structure suggested by its remaining files.
 
 ## Features
 
-The repository layout indicates an intended quiz application with:
+The following capabilities are suggested by the repository's documentation and filenames, but are **not verified implementation features**:
 
-- A JavaScript entry point at `index.js`
-- Quiz workflow logic in `src/quiz.js`
-- Input handling in `src/input.js`
-- Terminal color helpers in `src/colors.js`
-- Question data in `data/questions.json`
+- A command-line quiz application.
+- Quiz logic implemented in a module resembling `src/quiz.js`.
+- User input handling implemented in a module resembling `src/input.js`.
+- Terminal color or formatting support implemented in a module resembling `src/colors.js`.
+- Questions loaded from a JSON data file resembling `data/questions.json`.
+- An application entry point resembling `index.js`.
 
-These components are inferred from filenames; their implementation is not available to inspect.
+Because the corresponding ordinary source files are unavailable, none of these features can currently be confirmed or executed.
 
 ## Technology Stack
 
-The available repository contents do not include a readable dependency manifest or source code. The intended stack appears to be:
+The following technologies are suggested by the repository layout and documentation:
 
-- JavaScript
-- Node.js
-- JSON question data
+- **JavaScript** — suggested by the `.js` filenames.
+- **Node.js** — suggested by the intended command-line application structure.
+- **JSON** — suggested by the expected question data file.
 
-No framework, Node.js version, or third-party dependency can be confirmed.
+The following details could not be verified:
+
+- Node.js version requirement.
+- Package manager.
+- Runtime dependencies.
+- Development dependencies.
+- Build tools.
+- Testing framework.
+- Linting or formatting tools.
+- Supported operating systems.
+- Whether the application uses any external libraries.
+
+No usable `package.json` is present. The repository contains `._package.json`, but it is unreadable metadata-like content rather than a usable package manifest.
 
 ## Prerequisites
 
-No executable prerequisites can be verified. If the missing application files are restored, Node.js will likely be required to run the JavaScript entry point.
+There are currently no verified prerequisites because the application source and package manifest are unavailable.
+
+A restored version of the project may require:
+
+- Node.js.
+- A JavaScript package manager such as npm, yarn, or pnpm.
+- A terminal capable of running a command-line application.
+
+These requirements are expectations based on the intended project type and must be confirmed after the ordinary source files and package manifest are restored.
 
 ## Installation
 
-There is no `package.json` in the current checkout, so dependency installation cannot be performed. After restoring the project files, use the project’s package manager and manifest, for example:
+A verified installation procedure cannot currently be provided.
 
-```bash
-npm install
+The repository does not contain a readable `package.json`, and the expected application source files are absent. Therefore, commands such as dependency installation or application startup would be speculative.
+
+Before installation instructions can be established, the following files should be restored or added:
+
+```text
+package.json
+index.js
+src/quiz.js
+src/input.js
+src/colors.js
+data/questions.json
 ```
 
-The command above is a restoration-time instruction and cannot be validated against the current repository.
+Once those files are available, the package manifest should be inspected to determine the correct package manager commands and runtime requirements.
 
 ## Configuration
 
-No configuration files or environment variables are present. The expected quiz data path, based on the metadata filenames, is:
+No application configuration has been identified.
 
-```text
-data/questions.json
-```
+The repository does not currently provide readable configuration files, environment variable definitions, command-line options, or documented configuration values. There is also no verified information about:
+
+- Environment variables.
+- Configuration files.
+- Question data schema.
+- Number of questions.
+- Quiz settings.
+- Terminal formatting options.
+- Input or output configuration.
+
+Any configuration instructions should be added only after the implementation and package manifest are restored and reviewed.
 
 ## Running the Application
 
-The expected entry point is `index.js`, but that file is not present. Once the source is restored, the likely direct Node.js invocation is:
+The application cannot currently be run from the repository as reported.
+
+The expected entry point appears to be:
+
+```text
+index.js
+```
+
+However, that file is not present as an ordinary readable source file. Only `._index.js` is listed, and it is unreadable metadata-like content rather than a usable JavaScript entry point.
+
+No verified command is available for starting the application. A command such as the following must not be considered supported until the source and package manifest are restored:
 
 ```bash
 node index.js
 ```
 
-If a restored `package.json` defines a start script, the equivalent command may be:
-
-```bash
-npm start
-```
-
-Neither command is executable in the current checkout because the referenced files are missing.
+Similarly, no npm script or other startup command can be confirmed.
 
 ## Usage Examples
 
-The repository does not currently contain an executable quiz, so the examples below are restoration targets rather than commands that can run in the current checkout.
+No executable usage examples can be provided because the application implementation is unavailable.
 
-### Start the quiz
+The repository documentation suggests an interactive command-line quiz, but the following details remain unknown:
 
-After restoring `index.js` and the supporting modules:
+- How the application is started.
+- Whether questions are presented one at a time.
+- How answers are entered.
+- How correct and incorrect answers are reported.
+- Whether scores are calculated.
+- Whether colors or formatting are used.
+- How the application handles invalid input.
+- Whether the quiz can be restarted or exited.
 
-```bash
-node index.js
-```
-
-Expected interaction, if implemented as suggested by the filenames:
-
-```text
-$ node index.js
-Question 1: Which language runs in Node.js?
-1) JavaScript
-2) CSS
-3) SQL
-4) HTML
-Your answer: 1
-```
-
-The exact prompt and output format cannot be verified because `src/quiz.js` and `src/input.js` are missing.
-
-### Restore question data
-
-The expected data location is:
-
-```text
-data/questions.json
-```
-
-A possible question record, subject to confirmation from the restored implementation, is:
-
-```json
-{
-  "question": "Which language runs in Node.js?",
-  "options": ["JavaScript", "CSS", "SQL", "HTML"],
-  "answer": "JavaScript"
-}
-```
-
-### Install and run a restored copy
-
-```bash
-npm install
-node index.js
-```
-
-`npm install` requires a restored `package.json`; both commands require the missing application files.
+Usage documentation should be added after the entry point, input handling, quiz logic, and question data format have been restored and tested.
 
 ## Project Structure
 
+The repository currently contains the following files and directories:
+
 ```text
-.
+test-app/
 ├── ._.DS_Store
 ├── ._data
 ├── ._index.js
 ├── ._package.json
 ├── ._src
+├── README.md
+├── readme.md
 ├── data/
 │   └── ._questions.json
 └── src/
@@ -134,44 +153,129 @@ node index.js
     └── ._quiz.js
 ```
 
-The `._*` entries are AppleDouble metadata files created by macOS. They are not substitutes for the corresponding application files and should generally be excluded from source control.
+The `._*` files appear to be macOS AppleDouble or similar metadata files. They are not readable as ordinary UTF-8 source or data files and should not be treated as application assets.
+
+The ordinary paths expected from the repository documentation are not currently listed:
+
+```text
+index.js
+package.json
+data/questions.json
+src/colors.js
+src/input.js
+src/quiz.js
+```
 
 ## Core Components
 
-No readable implementation is available. Based on the filenames, the intended responsibilities are:
+The following components are inferred from filenames and existing documentation only.
 
-- `index.js`: application entry point
-- `src/quiz.js`: quiz flow and scoring logic
-- `src/input.js`: interactive input collection
-- `src/colors.js`: terminal color or formatting helpers
-- `data/questions.json`: quiz question source
+### `index.js`
 
-These responsibilities must be confirmed when the missing files are restored.
+Expected to be the application entry point. Its implementation is unavailable, so its startup behavior and imports cannot be verified.
+
+### `src/quiz.js`
+
+Expected to contain quiz-related logic. No functions, classes, question-processing behavior, scoring rules, or control flow can be confirmed.
+
+### `src/input.js`
+
+Expected to handle user input for the command-line application. The input method, validation behavior, prompts, and supported commands are unknown.
+
+### `src/colors.js`
+
+The filename suggests terminal color or output-formatting utilities. No supported colors, functions, dependencies, or formatting behavior can be verified.
+
+### `data/questions.json`
+
+Expected to contain quiz questions in JSON format. The ordinary file is absent, and the available `data/._questions.json` metadata file is not usable as question data. The JSON schema is therefore unknown.
 
 ## Data Sources
 
-The repository contains only `data/._questions.json`, which is metadata. No usable question data is currently available. A restored application is expected to load data from `data/questions.json`.
+The only expected data source identified by the repository structure is:
+
+```text
+data/questions.json
+```
+
+Its contents and schema are unavailable. It is not possible to determine:
+
+- Which fields each question contains.
+- Whether questions include multiple-choice answers.
+- How correct answers are represented.
+- Whether questions include categories, explanations, or difficulty levels.
+- Whether the application reads any other local or external data source.
+
+The existing `data/._questions.json` file should not be used as a replacement because it is metadata-like and unreadable as ordinary JSON data.
 
 ## Development Notes
 
-- The current checkout contains metadata files only; no application code can be executed.
-- There is no readable `package.json`, so dependencies and npm scripts cannot be confirmed.
-- Remove AppleDouble files before restoring or publishing the application.
-- Add tests and document the supported Node.js version once the implementation is available.
+This repository appears to be incomplete or affected by an incomplete transfer of macOS metadata files instead of the original project files.
+
+### Current limitations
+
+- The ordinary JavaScript source files are unavailable.
+- The ordinary `package.json` file is unavailable.
+- The ordinary question data file is unavailable.
+- The listed `._*` files cannot be read as UTF-8 source or JSON.
+- Dependencies and scripts cannot be inspected.
+- Runtime behavior cannot be tested.
+- No test files or test configuration are available.
+- No build or packaging process is documented or verifiable.
+
+### Restoration guidance
+
+To make the project inspectable and runnable:
+
+1. Restore the ordinary application files.
+2. Restore a valid `package.json`.
+3. Restore usable question data at `data/questions.json`.
+4. Remove or exclude macOS metadata files such as `._*` and `._.DS_Store`.
+5. Document the supported Node.js version.
+6. Document dependency installation commands.
+7. Document the application startup command.
+8. Add tests for quiz logic and input handling.
+9. Add an example question data schema.
+10. Verify all commands on a clean checkout.
+
+After restoration, this README should be updated to describe actual implementation behavior rather than inferred component roles.
 
 ## Error Handling
 
-No error-handling behavior can be documented or tested because the executable source files are missing. A restored implementation should document behavior for invalid answers, missing question data, malformed JSON, and end-of-input conditions.
+No error-handling behavior can be verified because the source code is unavailable.
+
+The following cases may require documentation and tests after restoration:
+
+- Missing or malformed question data.
+- Invalid JSON.
+- Empty question sets.
+- Invalid user input.
+- End-of-input or interrupted terminal sessions.
+- Missing runtime dependencies.
+- Unsupported Node.js versions.
+- Unexpected command-line arguments.
+
+These are restoration considerations, not confirmed behaviors of the current repository.
 
 ## Future Improvements
 
-- Restore `index.js`, the `src/` modules, `data/questions.json`, and `package.json`.
-- Add automated tests for question loading, input validation, scoring, and terminal output.
-- Define and document the question-data schema.
-- Add a supported Node.js version and npm scripts.
-- Remove committed AppleDouble metadata files.
-- Add a license and contribution guidelines.
+Potential improvements for the repository include:
+
+- Restore the missing ordinary source files and package manifest.
+- Restore and validate the question data file.
+- Add a complete installation and execution guide.
+- Define and document the question JSON schema.
+- Add automated tests.
+- Add input validation and user-friendly error messages.
+- Document the supported Node.js version.
+- Add npm scripts for common development tasks, if appropriate.
+- Add linting and formatting configuration.
+- Exclude macOS metadata files from version control.
+- Add continuous integration checks.
+- Clarify the project license and contribution process.
+
+These improvements should be implemented only after the original project requirements and intended behavior are confirmed.
 
 ## License
 
-No license file or license declaration is present. The project’s licensing terms are currently unspecified.
+No license file or verifiable license declaration was identified in the repository information provided. The licensing terms for this project are therefore **not specified**.
